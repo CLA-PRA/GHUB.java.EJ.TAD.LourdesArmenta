@@ -82,6 +82,45 @@ classDiagram
 
 ```mermaid
 ---
+title: Persona
+---
+classDiagram
+      class Persona
+      Persona: -String nombre
+      Persona: -String curp
+      Persona: -Fecha fechaNacimiento
+      Persona: +Persona()
+      Persona: +Persona(String,String,Fecha)
+      Persona: +void toString()
+      
+```
+```mermaid
+---
+title: Fecha
+---
+classDiagram
+      class Fecha
+      Fecha: -int dia
+      Fecha: -int mes
+      Fecha: -int anio
+      Fecha: +Fecha(int,int,int)
+      Fecha: +Fecha(String)
+      Fecha: +int getDia()
+      Fecha: +int getMes()
+      Fecha: +int getAnio()
+      Fecha: +setDia(int)
+      Fecha: +setMes(int)
+      Fecga: +setAnio(int)
+      Fecha: +boolean equals(Fecha)
+      Fecha: +int fechaToDias()
+      Fecha: +void diasToFecha()
+      Fecha: +void addDias(int)
+      Fecha: +String toString()
+      
+```
+
+```mermaid
+---
 title: Cadena
 ---
 classDiagram
@@ -97,6 +136,35 @@ classDiagram
       Cadena: +boolean llena()
       Cadena: +Cadena invertir()
       Cadena: +String toString()
+      
+```
+```mermaid
+---
+title: Numerote
+---
+classDiagram
+      class Numerote
+      Numerote:_int M
+      Numerote:+Numerote()
+      
+```
+```mermaid
+---
+title: Cuenta_Cheques
+---
+classDiagram
+      class Cuenta_Cheques
+      Cuenta_Cheques: -String nombreCuenta
+      Cuenta_Cheques: -String nombreCliente
+      Cuenta_Cheques: -String sucursal
+      Cuenta_Cheques: -float saldo
+      Cuenta_Cheques: +Cuenta_Cheques()
+      Cuenta_Cheques: +Cuenta_Cheques(String,String,String)
+      Cuenta_Cheques: +deposito(float)
+      Cuenta_Cheques: +retiro(float)
+      Cuenta_Cheques: +float muestra_saldo()
+
+      
       
 ```
 
@@ -130,6 +198,16 @@ classDiagram
       Triangulo: -double longLados[3]
       Triangulo: +Triangulo(Punto, Punto, Punto)
       Triangulo: +double longitudes()
+      
+```
+```mermaid
+---
+title: Poligono
+---
+classDiagram
+      class Poligono
+      Poligono:  _int M
+      Poligono: +Conjunto()
       
 ```
 

@@ -40,7 +40,99 @@ classDiagram
       Rational: +add()
       Rational: +mult()
       Rational: +equal()
+
 ```
+[Referencia-Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
+```mermaid
+---
+title: Matriz
+---
+classDiagram
+      class Matriz
+      Matriz: -int n
+      Matriz: -int m 
+      Matriz: -int matriz[]
+      Matriz: +Matriz()
+      Matriz: +Matriz(int,int)
+      Matriz: +void asignarMat(int,int,int)
+      Matriz: +int infoMat(int,int)
+      Matriz: +int filasMat()
+      Matriz: +int columnasMat()
+```
+[Referencia-Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
+```mermaid
+---
+title: Conjunto
+---
+classDiagram
+      class Conjunto
+      Conjunto:  _int M
+      Conjunto: -Object cto[]
+      Conjunto: -int cardinal
+      Conjunto: -int capacidad
+      Conjunto: +Conjunto()
+      Conjunto: +boolen esVacio()
+      Conjunto: +void añadir(Object)
+      Conjunto: +void retirar(Object)
+      Conjunto: +boolean pertenece(Object)
+      Conjunto: +int cardinal()
+      Conjunto: +Conjunto union(Conjunto)
+      Conjunto: +Object elemento(int)
+```
+
+```mermaid
+---
+title: Cadena
+---
+classDiagram
+      class Cadena
+      Cadena: -char cadena[80]
+      Cadena: -int tamanio 
+      Cadena: -int TOPE
+      Cadena: +Cadena()
+      Cadena: +Cadena(char [])
+      Cadena: +void borrarInicio()
+      Cadena: +void agregarFinal(char)
+      Cadena: +boolean vacia()
+      Cadena: +boolean llena()
+      Cadena: +Cadena invertir()
+      Cadena: +String toString()
+      
+```
+
+```mermaid
+---
+title: Punto
+---
+classDiagram
+      class Punto
+      Punto: -int x
+      Punto: -int y 
+      Punto: -int z
+      Punto: -String dimension
+      Punto: +Punto()
+      Punto: +Punto(int, int, int)
+      Punto: +void leer()
+      Punto: +void despliega()
+      Punto: +double distancia(Punto)
+      
+```
+
+```mermaid
+---
+title: Triangulo
+---
+classDiagram
+      class Triangulo
+      Triangulo: -Punto v1
+      Triangulo: -Punto v2 
+      Triangulo: -Punto v3
+      Triangulo: -double longLados[3]
+      Triangulo: +Triangulo(Punto, Punto, Punto)
+      Triangulo: +double longitudes()
+      
+```
+
 [Referencia-Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
 
 ## Diagrama de clases UML con draw.io

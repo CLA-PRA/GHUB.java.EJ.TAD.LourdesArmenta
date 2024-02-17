@@ -1,5 +1,5 @@
-./miPrincipal/AppCuenta_cheques.java
 ./miPrincipal/Punto.java
+./miPrincipal/AppPoligono.java
 ./miPrincipal/AppCadena.java
 ./miPrincipal/Fecha.java
 ./miPrincipal/AppPunto.java
@@ -10,11 +10,15 @@
 ./miPrincipal/Conjunto.java
 ./miPrincipal/AppPersona.java
 ./miPrincipal/PosicionIlegalException.java
+./miPrincipal/Numerote.java
 ./miPrincipal/AppFecha.java
 ./miPrincipal/AppMatriz.java
 ./miPrincipal/Persona.java
 ./miPrincipal/Cadena.java
+./miPrincipal/Poligono.java
+./miPrincipal/AppCuenta_Cheques.java
 ./miPrincipal/Rational.java
+./miPrincipal/Cuenta_Cheques.java
 ./miPrincipal/AppNumerote.java
 ./miPrincipal/AppTriangulo.java
 ./miPrincipal/AppConjunto.java

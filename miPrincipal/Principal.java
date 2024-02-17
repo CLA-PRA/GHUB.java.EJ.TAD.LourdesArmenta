@@ -21,6 +21,7 @@ public class Principal {
             System.out.println("8) CUENTA_CHEQUES");
             System.out.println("9) PUNTO");
             System.out.println("10)TRIANGULO");
+            System.out.println("11)POLIGONO");
             System.out.println("            ");
             System.out.println("0) SALIR");
             System.out.print("Selecciona opción:");
@@ -49,7 +50,7 @@ public class Principal {
                AppNumerote.menu();
                break;
             case 8:
-               AppCuenta_cheques.menu();
+               AppCuenta_Cheques.menu();
                break;
             case 9:
                AppPunto.menu();
@@ -57,18 +58,18 @@ public class Principal {
             case 10:
                AppTriangulo.menu();
                break;
+            case 11:
+               AppPoligono.menu();
+               break;
             case 0:
                System.out.println("ADIOS!");
                consola.close();
                break;
-               
-
             default:
                System.out.println("Valor incorrecto, intente de nuevo!");
-
         }
        
     }while (opc != 0);
 		
-    }
+   }
 }

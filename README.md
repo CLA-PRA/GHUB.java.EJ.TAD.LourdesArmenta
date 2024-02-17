@@ -4,7 +4,7 @@
 
 **Este ejercicio implementa el TAD Rational**
 
-## Ejecución
+## Ejecución Rational
 
 Tu programa debería ejecutarse de la siguiente manera:
 
@@ -94,6 +94,7 @@ classDiagram
       Persona: +void toString()
       
 ```
+
 ```mermaid
 ---
 title: Fecha
@@ -110,7 +111,7 @@ classDiagram
       Fecha: +int getAnio()
       Fecha: +setDia(int)
       Fecha: +setMes(int)
-      Fecga: +setAnio(int)
+      Fecha: +setAnio(int)
       Fecha: +boolean equals(Fecha)
       Fecha: +int fechaToDias()
       Fecha: +void diasToFecha()
@@ -125,9 +126,9 @@ title: Cadena
 ---
 classDiagram
       class Cadena
-      Cadena: -char cadena[80]
+      Cadena: -char cadena[TOPE]
       Cadena: -int tamanio 
-      Cadena: -int TOPE
+      Cadena: -int TOPE=80
       Cadena: +Cadena()
       Cadena: +Cadena(char [])
       Cadena: +void borrarInicio()
@@ -138,14 +139,42 @@ classDiagram
       Cadena: +String toString()
       
 ```
+## Ejecución Numerote
+
+Tu programa debería ejecutarse de la siguiente manera:
+
+```
+*Numerote*
+======================
+Introduce un numerote a: 987654321543216789123
+Introduce un numerote b: 123456789123456789123
+
+
+suma     a+b = 1111111110666673578246
+resta    a-b = 135802467580240000000
+
+
+
+987654321543216789123 + 923456789123456789123 = 1111111110666673578246
+987654321543216789123 - 123456789123456789123 = 135802467580240000000
+
+
+```
 ```mermaid
 ---
 title: Numerote
 ---
 classDiagram
       class Numerote
-      Numerote:_int M
-      Numerote:+Numerote()
+      Numerote: -int numero[]
+      Numerote: -int tamanio
+      Numerote: +Numerote()
+      Numerote: +Numerote(int [])
+      Numerote: +Numerote(int)
+      Numerote: +Numerote Suma(Numerote)
+      Numerote: +Numerote resta(Numerote)
+      Numerote: +String toString()
+
       
 ```
 ```mermaid
@@ -160,8 +189,8 @@ classDiagram
       Cuenta_Cheques: -float saldo
       Cuenta_Cheques: +Cuenta_Cheques()
       Cuenta_Cheques: +Cuenta_Cheques(String,String,String)
-      Cuenta_Cheques: +deposito(float)
-      Cuenta_Cheques: +retiro(float)
+      Cuenta_Cheques: +float deposito(float)
+      Cuenta_Cheques: +float retiro(float)
       Cuenta_Cheques: +float muestra_saldo()
 
       
@@ -206,8 +235,12 @@ title: Poligono
 ---
 classDiagram
       class Poligono
-      Poligono:  _int M
-      Poligono: +Conjunto()
+      Poligono: -int N 
+      Poligono: -arreglo[PUNTO]
+      Poligono: +Poligono(int)
+      Poligono: +void LeerDatos()
+      Poligono: +void DesplegarArreglos()
+      Poligono: +double calcularPerimetro()
       
 ```
 

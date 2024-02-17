@@ -79,8 +79,7 @@ public class Fecha {
 	}
 	//sobre escribrir el método equals que herados de Object
 	public boolean equals(Object o) {
-		Fecha otra = (Fecha)o;
-		return (dia ==otra.dia) && (mes==otra.mes) && (anio == otra.anio);
+		//colocar aquí el código faltante
 		
 	}
 	public int getDia() {

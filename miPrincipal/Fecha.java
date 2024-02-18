@@ -6,13 +6,15 @@ public class Fecha {
 	private int anio;
 	//retorna la fecha expresada en días
 	//11/02/1968
-	private int fechaToDias() {
+	public int fechaToDias() {
+		
 		return anio*360+mes*30+dia;
 		
 	}
 	//asignar la fecha expresada en dias a los atributos
-	private void diasToFecha(int i)
+	public Fecha diasToFecha(int i)
 	{
+		Fecha nuevaFecha;
 		//dividimos por 360 y obtenemos el año
 		anio = (int)i/360;
 		//del resto o residuo de la división anterior
@@ -34,12 +36,15 @@ public class Fecha {
 			mes = 12;
 			anio-- ;
 		}
+		
+		nuevaFecha= new Fecha(dia,mes,anio);
+		return nuevaFecha;
 	}
-	public void addDias(int d) {
+	public Fecha addDias(int d) {
 		//convertir la fecha a dias y le sumamos d
 		int suma =fechaToDias()+d;
 		//la fecha resultante se separa en dia, mes y año
-		diasToFecha(suma);
+		return diasToFecha(suma);
 	}
 	
 	//constructos
@@ -63,6 +68,7 @@ public class Fecha {
 		String sAnio = s.substring(pos2+1);
 		anio = Integer.parseInt(sAnio);
 		
+		
 	}
 	public Fecha(int d,int m,int a) {
 		dia = d;
@@ -79,7 +85,8 @@ public class Fecha {
 	}
 	//sobre escribrir el método equals que herados de Object
 	public boolean equals(Object o) {
-		//colocar aquí el código faltante
+		Fecha otra = (Fecha)o;
+		return (dia ==otra.dia) && (mes==otra.mes) && (anio == otra.anio);
 		
 	}
 	public int getDia() {
@@ -100,6 +107,7 @@ public class Fecha {
 	public void setAnio(int anio) {
 		this.anio = anio;
 	}
+	
 	
 
 } 

@@ -4,6 +4,11 @@ public class Persona {
     private String dni;
     private String nombre;
     private Fecha FechaNacimiento;
+    public Persona(String dn, String nom, Fecha fn){
+        this.dni = dn;
+        this.nombre=nom;
+        this.FechaNacimiento=fn;
+    }
     public String getDni() {
         return dni;
     }

@@ -5,7 +5,12 @@ public class Poligono {
 	private Punto arreglo[];
 	
 	public Poligono(int N) {
-		//Colocar aquí el código faltante
+		this.N = N;
+		this.arreglo = new Punto[N+1];
+	}
+	public Poligono(Punto a[]){
+		this.N = a.length;
+		this.arreglo = a;
 	}
 	public void LeerDatos() {
 		Scanner entrada = new Scanner(System.in);
@@ -29,7 +34,20 @@ public class Poligono {
 		}
 	}
 	public double calcularPerimetro() {
-		//colocar aquí el código faltante
+		double p=0;
+		for (int i=0;i<this.arreglo.length-1;i++) {
+			 p += this.arreglo[i].distancia(this.arreglo[i+1]);	 
+			 
+		}
+		return p;
+	}
+	public double calcularPerimetro(Poligono a) {
+		double p=0;
+		for (int i=0;i<a.arreglo.length-1;i++) {
+			 p += a.arreglo[i].distancia(a.arreglo[i+1]);	
+			 
+		}
+		return p;
 	}
 	
 

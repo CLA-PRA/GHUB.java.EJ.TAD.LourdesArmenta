@@ -9,7 +9,8 @@
 Tu programa debería ejecutarse de la siguiente manera:
 
 ```
-*Rational*
+======================
+*.     Rational.     *
 ======================
 Introduce el numerador   del Racional a: 7
 Introduce el denominador del Racional a: 5
@@ -80,6 +81,19 @@ classDiagram
       Conjunto: +Object elemento(int)
 ```
 
+```
+======================
+*.       Persona       *
+======================
+Capturar los Datos de al menos una persona.
+
+Nombre = Lourdes Armenta
+DNI = AELL680211
+Fecha (DD/MM/AAAA)= 11/2/1968
+
+
+```
+
 ```mermaid
 ---
 title: Persona
@@ -94,7 +108,23 @@ classDiagram
       Persona: +void toString()
       
 ```
+```
+======================
+*.       Fecha       *
+======================
 
+Proporciona dia en formato DD de Fecha 1= 2
+Proporciona mes en formato MM de Fecha 1= 11
+Proporciona Anio  en formato de Fecha 1AAAA= 1970
+Proporciona Fecha 2 en formato (DD/MM/AAAA): 2/11/1970
+La Fecha1 es igual a la Fecha 2
+Agrega a la Fecha 1: un año(360 dias), un mes(30 dias) y un día
+La Fecha resultanes es: 3/12/1971
+Calcula el número de Días que tiene la Fecha: 2/11/1970"
+Numero de días de la Fecha 2/11/1970 = 709532
+
+
+```
 ```mermaid
 ---
 title: Fecha
@@ -114,8 +144,8 @@ classDiagram
       Fecha: +setAnio(int)
       Fecha: +boolean equals(Fecha)
       Fecha: +int fechaToDias()
-      Fecha: +void diasToFecha()
-      Fecha: +void addDias(int)
+      Fecha: +Fecha diasToFecha()
+      Fecha: +Fecha addDias(int)
       Fecha: +String toString()
       
 ```
@@ -144,19 +174,20 @@ classDiagram
 Tu programa debería ejecutarse de la siguiente manera:
 
 ```
-*Numerote*
+======================
+*.     Numerote.     *
 ======================
 Introduce un numerote a: 987654321543216789123
 Introduce un numerote b: 123456789123456789123
 
 
 suma     a+b = 1111111110666673578246
-resta    a-b = 135802467580240000000
+resta    a-b = 864197532419760000000
 
-
-
-987654321543216789123 + 923456789123456789123 = 1111111110666673578246
-987654321543216789123 - 123456789123456789123 = 135802467580240000000
+987654321543216789123 + 123456789123456789123 = 1111111110666673578246
+                                                
+987654321543216789123 - 123456789123456789123 = 864197532419760000000
+                                                                                    
 
 
 ```
@@ -229,6 +260,31 @@ classDiagram
       Triangulo: +double longitudes()
       
 ```
+```
+======================
+*.     Poligono.     *
+======================
+Dame Lados del Polígono: 5
+Introduce un numerote b: 123456789123456789123
+Dame coordenada(x) de vertice 1: 1
+Dame coordenada(Y) de vertice 1: 1
+Dame coordenada(x) de vertice 2: 1
+Dame coordenada(Y) de vertice 2: 4
+Dame coordenada(x) de vertice 3: 3
+Dame coordenada(Y) de vertice 3: 4
+Dame coordenada(x) de vertice 4: 4
+Dame coordenada(Y) de vertice 4: 3
+Dame coordenada(x) de vertice 5: 3
+Dame coordenada(Y) de vertice 5: 1
+
+Vertice1 x =1    y =1
+Vertice2 x =1    y =4
+Vertice3 x =3    y =4
+Vertice4 x =4    y =3
+Vertice5 x =3    y =1
+Perimetro = 10.650281539872886
+
+```
 ```mermaid
 ---
 title: Poligono
@@ -238,9 +294,11 @@ classDiagram
       Poligono: -int N 
       Poligono: -arreglo[PUNTO]
       Poligono: +Poligono(int)
+      Poligono: +Poligono(Punto[])
       Poligono: +void LeerDatos()
       Poligono: +void DesplegarArreglos()
       Poligono: +double calcularPerimetro()
+      Poligono: +double calcularPerimetro(Poligono)
       
 ```
 

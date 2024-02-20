@@ -43,29 +43,17 @@ public class Numerote {
     public Numerote suma(Numerote b) {
     	// Crear un array para almacenar el resultado de la suma
     	//El tamaño dependerá de la cadena mas larga
-        int[] c = new int[Math.max(numeros.length, b.numeros.length) + 1];
+        
 
         // Llevar la cuenta del acarreo
-        int acarreo = 0;
+        
 
         // Recorrer los dígitos de ambos números de derecha a izquierda
-        for(int i=numeros.length-1,j=b.numeros.length-1,k=c.length-1;i>=0 || j>=0;i--,j--,k--) {
-        	int op1=(i>=0 ? numeros[i]:0);
-        	int op2=(j>=0 ? b.numeros[j]:0);
-        	
-        	int suma = op1+op2+acarreo;
-        	
-        	c[k]=suma%10;
-        	acarreo = suma /10;
-        			 	
-        }
+        
        
 
         // Si hay acarreo, agregarlo al resultado
-        if (acarreo > 0) {
-            //c[c.length - 1] = acarreo;
-        	c[0]=acarreo;
-        }
+        
         
 
         // Crear un nuevo Numerote con el resultado
@@ -76,28 +64,13 @@ public class Numerote {
     public Numerote resta(Numerote b) {
     	
     	 // Crear un array para almacenar el resultado de la resta
-    	 int[] r = new int[Math.max(numeros.length, b.numeros.length)];
+    	
 
     	 // Llevar la cuenta del préstamo
-    	 int prestamo = 0;
+    	 
 
     	 // Recorrer los dígitos de ambos números de derecha a izquierda
-    	 for (int i = numeros.length - 1, j = b.numeros.length - 1, k = r.length - 1; i >= 0 || j >= 0; i--, j--, k--) {
-
-    	     // Restar los dígitos actuales y el préstamo
-    	     int resta = (i >= 0 ? numeros[i] : 0) - (j >= 0 ? b.numeros[j] : 0) - prestamo;
-
-    	     // Si la resta es negativa, tomar prestado 1 del siguiente dígito
-    	     if (resta < 0) {
-    	         resta += 10;
-    	         prestamo = 1;
-    	     } else {
-    	         prestamo = 0;
-    	     }
-
-    	     // Almacenar el resultado de la resta en el array
-    	     r[k] = resta;
-    	 }
+    	 
 
     	 // Eliminar los ceros a la izquierda
     	 

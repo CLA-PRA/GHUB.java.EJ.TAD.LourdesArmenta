@@ -5,46 +5,24 @@ public class Fecha {
 	private int mes;
 	private int anio;
 	//retorna la fecha expresada en días
-	//11/02/1968
+	//considerando que todos los años tienen 360 días
+	// y todos los meses 30,para hacerlo mas simple
 	public int fechaToDias() {
 		
-		return anio*360+mes*30+dia;
+		
 		
 	}
 	//asignar la fecha expresada en dias a los atributos
 	public Fecha diasToFecha(int i)
 	{
-		Fecha nuevaFecha;
-		//dividimos por 360 y obtenemos el año
-		anio = (int)i/360;
-		//del resto o residuo de la división anterior
-		//podemos obtener el mes y el dia
-		int resto = i%360;
-	   // el mes del resto lo divido entre 30
-		mes =(int)resto/30;
-		//el resto de la division anterior son los dias
-		dia = resto%30;
-		//ajustar por si el día es cero
-		if (dia == 0)
-		{
-			dia = 30;
-			mes --;
-		}
-		//ajustar por si el mes quedo en cero
-		if (mes == 0)
-		{
-			mes = 12;
-			anio-- ;
-		}
+		//coloque el código faltante
 		
-		nuevaFecha= new Fecha(dia,mes,anio);
-		return nuevaFecha;
+		
 	}
 	public Fecha addDias(int d) {
-		//convertir la fecha a dias y le sumamos d
-		int suma =fechaToDias()+d;
-		//la fecha resultante se separa en dia, mes y año
-		return diasToFecha(suma);
+		//convertir la fecha a dias,utilizando fechaTodias y le sumamos y después convertimos de nuevo 
+		//los dias a fecha utilizando diasToFeche
+		
 	}
 	
 	//constructos
@@ -85,8 +63,7 @@ public class Fecha {
 	}
 	//sobre escribrir el método equals que herados de Object
 	public boolean equals(Object o) {
-		Fecha otra = (Fecha)o;
-		return (dia ==otra.dia) && (mes==otra.mes) && (anio == otra.anio);
+		//coloque el código faltante
 		
 	}
 	public int getDia() {

@@ -35,18 +35,13 @@ public class Poligono {
 	}
 	public double calcularPerimetro() {
 		double p=0;
-		for (int i=0;i<this.arreglo.length-1;i++) {
-			 p += this.arreglo[i].distancia(this.arreglo[i+1]);	 
-			 
-		}
+		//coloque aquí el código faltante
+		
 		return p;
 	}
 	public double calcularPerimetro(Poligono a) {
 		double p=0;
-		for (int i=0;i<a.arreglo.length-1;i++) {
-			 p += a.arreglo[i].distancia(a.arreglo[i+1]);	
-			 
-		}
+		//coloque elcódigo faltante
 		return p;
 	}
 	

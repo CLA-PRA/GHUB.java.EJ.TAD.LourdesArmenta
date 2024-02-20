@@ -31,17 +31,11 @@ public class Rational{
     }
 
     public Rational add(Rational a, Rational b){
-        Rational x = new Rational();
-        x.setNumerador(a.getDenominador() * b.getNumerador() + b.getDenominador()* a.getNumerador());
-        x.setDenominador(a.getDenominador() * b.getDenominador());
-        return x;
+        //Coloque aquí el código faltante
     }
 
     public Rational mult(Rational a, Rational b){
-        Rational x = new Rational();
-        x.setNumerador(a.getNumerador() * b.getNumerador());
-        x.setDenominador(a.getDenominador() * b.getDenominador());
-        return x;
+       //Coloque aquí elcódigo faltante
     }
     public boolean equal(Rational a,Rational b){
 
